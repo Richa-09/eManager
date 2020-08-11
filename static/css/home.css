@@ -1,0 +1,98 @@
+.heading{
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+}
+
+.first{
+    font-family: 'Dancing Script', cursive;
+    font-size: 5rem;
+    float: left;
+}
+
+.second{
+    font-size: 3rem;
+    text-align: right;
+}
+
+.search{
+    font-size:5rem;
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Mitr', sans-serif;
+}
+
+.button{
+  background: #49a1d8;
+  border-radius: 100px;
+  padding: 20px 60px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.45em;
+  margin: 0 15px;
+  text-align: center;
+}
+
+.button:hover { 
+    -webkit-animation: hover 1200ms linear 2 alternate;
+    animation: hover 1200ms linear 2 alternate;
+  }
+
+.ride{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.info{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.cnt{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1500px;
+}
+.txt{
+    font-size: 30px;
+    margin-top: 70px;
+    
+}
+
+.head2{
+    text-align: center;
+    font-family: 'Mitr', sans-serif;
+}
+
+.rounded{
+    float: right;
+}
+
+.board{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    float: right;
+}
+
+.lead{
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 0rem;
+    padding-top: 0.5rem;
+}
+
+.why{
+    font-size: 5rem;
+    float: center;
+    color:black;
+    font-family: 'Pacifico', cursive;
+    margin-left: 10rem;
+}
+
+.ques{
+    border: teal solid ;
+}
+
+.add {
+    margin-bottom: 4rem;
+}

@@ -1,0 +1,63 @@
+{% extends 'general/layout.html'%}
+{% load static %}
+
+{%block head%}
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/listpage.css' %}">
+{%endblock%}
+
+{%block title%}eManager | Lists{%endblock%}
+
+{%block content%}
+    <div class="row main1">
+        <div class="col-9">
+              {%for l in lists%}
+              
+              <div class="container bg-light shadow-lg mb-5 main">
+                 <h1 class="mx-2">{{l.name}} <a href="{%url 'del_list' k=k p=l.id %}" class="btn btn-outline-secondary btn-sm active mt-0 mx-1 my-1 d-inline del" role="button" aria-pressed="true"><i class="fa fa-times"></i></a></h1>
+
+                 {%for c in cards%}
+                 {%if c.checklist.id is l.id%}
+                 <div class="container mb-4">
+                    <li class="mx-2">{{c.name}}
+                    <a href="{%url 'del_card' k=k p=l.id z=c.id %}" class="btn btn-danger btn-sm active mt-0 mx-1 my-1 d-inline del" role="button" aria-pressed="true"><i class="fa fa-trash"></i></a></li>
+                 </div>
+                 {%endif%}
+                 {%endfor%}
+
+                   <form method="POST" action="{%url 'create_card' k=k p=l.id %}" >
+                   
+                    {%csrf_token%}
+                <div class="row px-3">
+                   <div class="col-9 mt-0 mb-0 mx-0 my-0 px-0 py-0">
+                   <div class="form-group mt-0 mb-0 mx-2 my-0 px-0 py-0">
+                        <input type="text" class="form-control mt-1 mb-1 mx-0 my-0" id="exampleInputEmail1" name="name" aria-describedby="emailHelp" placeholder="Add Card">
+                   </div>
+                   </div>
+
+                   <div class="col-3 mt-0 mb-0 mx-0 my-0 px-0 py-0">
+                   <button type="submit" class="btn btn-primary mt-0 mx-1 my-1 d-inline "><i class="fa fa-plus"></i></button>
+                   </div>
+                </div>
+
+                   </form>
+
+              </div>
+             {%endfor%}
+        </div>
+
+        <div class="col-3">
+          <div class="container side">
+             <h1 class="create">CREATE LIST</h1>
+               <form method="POST" action="{%url 'create_list' k=k %}">
+                 {%csrf_token%}
+                 <div class="form-group">
+                   <input type="text" class="form-control" id="exampleInputEmail1" name="title" aria-describedby="emailHelp" placeholder="Create New List">
+                 </div>
+                 <button type="submit" class="btn btn-primary mt-1">Submit</button>
+               </form>
+          </div>
+        </div>
+    </div>
+
+{%endblock%}

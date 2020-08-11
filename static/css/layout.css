@@ -1,0 +1,25 @@
+#main_nav{
+    background-color:#2C292F;
+    background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");}
+body{
+    background-color: #43853d;
+background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+margin-right: 0rem;
+margin-left: 0rem;
+padding-left: 0rem;
+padding-right: 0rem;
+margin-top: 0; padding-top: 0; margin-bottom: 0; padding-bottom: 0;
+}
+.navbar-brand{
+    
+    font-family: 'Sonsie One', cursive;
+    font-size: 30px;
+}
+.nav-link {
+    font-family: 'Heebo', sans-serif;
+    font-size: 29px;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: white;
+}

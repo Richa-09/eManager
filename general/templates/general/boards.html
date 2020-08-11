@@ -1,0 +1,22 @@
+{% extends 'general/layout.html'%}
+{% load static %}
+{%block head%}
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/boards.css' %}">
+{%endblock%}
+
+{%block title%}eManager | Your Boards{%endblock%}
+
+{%block content%}
+  <div class="container">
+      {%for b in boardss%}
+      <div class="container main mb-5 bg-light text-center pt-5 ">
+          <h1>>{{b.title}}<</h1>
+          <b>Description: </b>
+          <p class="detail">{{b.detail}}</p>
+          <a class="btn btn-primary" href="{% url 'listpage' k=b.id %}" role="button">Get Started</a>
+          <a href="{%url 'del_board' z=b.id %}" class="btn btn-danger btn-sm active mt-0 mx-1 my-1 d-inline" role="button" aria-pressed="true"><i class="fa fa-trash"></i></a>
+      </div>
+      {%endfor%}
+  </div>
+{%endblock%}

@@ -1,0 +1,76 @@
+{% extends 'general/layout.html'%}
+{% load static %}
+{%block head%}
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Mitr&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico&display=swap" rel="stylesheet">
+<style>
+    .heading{
+      background-image: url({% static 'images/img2.jpg'%});
+    }
+  </style>
+  <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{%endblock%}
+{%block title%}eManager | Home{%endblock%}
+
+{%block content%}
+<div class="heading jumbotron text-light img-fluid mb-0 pb-0">
+    <div class="container ml-5 mr-5">
+      <p class="first ml-0 mr-0">eManager
+          <br>
+          <span class="second ml-5">Your helping hand</span>
+     </p>
+    </div>
+ </div>
+
+ <div class="container align-self-center board">
+    <a href="{%url 'new_board'%}" class="button">Create your board</a>
+ </div>
+
+ <div class="container lead">
+   Plan.Organise.Execute
+ </div>
+
+ 
+   <span class="why">Why eManager?</span>
+
+
+ <div class="jumbotron info shadow-lg cnt mt-0" >
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <h2 class="head2">Easy to use</h2>
+            <p class="text-secondary txt">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+              Obcaecati quibusdam commodi, sunt explicabo corrupti doloremque! 
+              Quibusdam quasi, rem fugit autem mollitia eligendi animi incidunt veniam necessitatibus eveniet quas deserunt et?
+            </p>
+        </div>
+        <div class="col">
+          <div class="container-fluid">
+          <img src="{% static 'images/easy.jpg' %}" style="width: 600px; height: 400px; margin-right: 60px;" class="rounded">
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="jumbotron mt-5 info shadow-lg cnt add">
+    <div class="row">
+        <div class="col">
+          <div class="container-fluid">
+            <img src="{% static 'images/plan.jpg' %}" class="rounded">
+            </div>
+        </div>
+        <div class="col">
+          <h2 class="head2">Organised Planning with boards & cards</h2>
+          <p class="text-secondary txt">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Maxime, non excepturi. Vero totam assumenda voluptatem veniam 
+            voluptatibus sint doloremque, laboriosam tempore eaque earum 
+            alias voluptate optio harum molestias culpa. Impedit?
+          </p>
+        </div>
+    </div>
+</div>
+{%endblock%}

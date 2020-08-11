@@ -1,0 +1,12 @@
+.main{
+    margin-left: 0rem;
+    margin-right: 0rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+
+.word{
+    color: white;
+    font-size: 3rem;
+    font-family: 'Dancing Script', cursive;
+}

@@ -1,0 +1,27 @@
+.main1{
+    overflow: auto;
+}
+
+.main{
+        width: 30%;
+        margin: 1.66%;
+        float: left;
+        border-radius: 5;
+}
+
+.side{
+    padding-top: 16rem;
+    float: left;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.create {
+    font-style: oblique;
+    font-weight: 800;
+    font-family: inherit;
+}
+
+.del {
+    float: right;
+}

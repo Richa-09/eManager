@@ -1,0 +1,16 @@
+.main {
+    width: 30%;
+    height: 300px;
+    margin: 1.66%;
+    float: left;
+    align-items: center;
+    border-radius: 1.5rem;
+}
+
+.detail {
+    font-style: oblique;
+}
+
+.btn {
+    align-items: center;
+}
